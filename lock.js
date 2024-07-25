@@ -1,18 +1,19 @@
-var screen=document.getElementById("bckgnd");
-function btnClick(value){
-screen.value+=value;
-}
-function clearScreen(){
-    bckgnd.value=" ";
+var screen = document.getElementById("bckgnd");
+
+function btnClick(value) {
+  screen.value += value;
 }
 
-function findResult(){
-    if(document.getElementById('bckgnd').value!=1234){
-        alert('Wrong pin number. Please try again.');
-        return false;
-    }
-    if(document.getElementById('bckgnd').value==1234){
-        alert('Login is successful!');
-        return true;
-    }
+function clearScreen() {
+  screen.value = "";
+}
+
+function findResult() {
+  if (screen.value != "1234") {
+    alert("Wrong pin number. Please try again.");
+    return false;
+  } else {
+    alert("Login is successful!");
+    return true;
+  }
 }
